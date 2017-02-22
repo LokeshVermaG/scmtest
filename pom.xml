@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.tig</groupId>
 	<artifactId>scmtest</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>mule</packaging>
 	<name>Mule scmtest Application</name>
 
@@ -20,7 +20,7 @@
 		<url>https://github.com/LokeshVermaG/scmtest</url>
 		<developerConnection>scm:git:https://github.com/LokeshVermaG/scmtest</developerConnection>
 		<connection>scm:git:https://github.com/LokeshVermaG/scmtest</connection>
-		<tag>HEAD</tag>
+		<tag>M2RELEASE-TAG-1.0.1</tag>
 	</scm>
 	<build>
 		<plugins>
