@@ -16,8 +16,19 @@
     	<mule.tools.version>1.2</mule.tools.version>
 	</properties>
 
+	<scm>
+		<url>https://github.com/LokeshVermaG/scmtest</url>
+		<developerConnection>scm:git:https://github.com/LokeshVermaG/scmtest</developerConnection>
+		<connection>scm:git:https://github.com/LokeshVermaG/scmtest</connection>
+		<tag>HEAD</tag>
+	</scm>
 	<build>
 		<plugins>
+		<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.2</version>				
+			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
@@ -134,6 +145,19 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+    
+    <distributionManagement>		
+		<repository>
+			<id>releases</id>
+			<name>Internal Releases</name>
+			<url>http://localhost:8081/nexus/content/repositories/topa-release</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Internal Snapshot Releases</name>
+			<url>http://localhost:8081/nexus/content/repositories/topa-snapshot</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<repositories>
           <repository>
@@ -149,6 +173,7 @@
             <layout>default</layout>
         </repository>
     </repositories>
+    
     <pluginRepositories>
         <pluginRepository>
             <id>mulesoft-release</id>
